@@ -6,9 +6,9 @@ import Banner from "../components/Banner";
 import SmallCard from "../components/SmallCard";
 import MediumCard from "../components/MediumCard";
 import LargeCard from "../components/LargeCard";
-import Footer from '../components/Footer'
+import Footer from "../components/Footer";
 
-const Home: NextPage = ({ exploreData, cardData }) => {
+const Home: NextPage = ({ exploreData, cardData }: any) => {
   return (
     <div className="">
       <Head>
@@ -26,7 +26,7 @@ const Home: NextPage = ({ exploreData, cardData }) => {
           </h2>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {exploreData?.map((item, index) => (
+            {exploreData?.map((item: any, index: any) => (
               <SmallCard {...item} key={index} />
             ))}
           </div>
@@ -37,7 +37,7 @@ const Home: NextPage = ({ exploreData, cardData }) => {
             live anywhere
           </h2>
           <div className="flex space-x-3 overflow-scroll scrollbar-hide p-3 -ml-3">
-            {cardData?.map((item, index) => (
+            {cardData?.map((item: any, index: any) => (
               <MediumCard key={index} {...item} />
             ))}
           </div>
